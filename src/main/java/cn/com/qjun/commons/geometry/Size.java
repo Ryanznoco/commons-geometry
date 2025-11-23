@@ -7,6 +7,8 @@ import lombok.EqualsAndHashCode;
 import lombok.ToString;
 import lombok.experimental.Accessors;
 
+import java.io.Serializable;
+
 /**
  * @author RenQiang
  * @date 2025/11/23
@@ -16,7 +18,9 @@ import lombok.experimental.Accessors;
 @EqualsAndHashCode
 @Accessors(fluent = true)
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
-public class Size {
+public class Size implements Serializable {
+    private static final long serialVersionUID = -6994522162639554389L;
+
     private int width;
     private int height;
 
