@@ -1,10 +1,6 @@
 package cn.com.qjun.commons.geometry;
 
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.ToString;
+import lombok.*;
 import lombok.experimental.Accessors;
 
 import java.io.Serializable;
@@ -17,7 +13,8 @@ import java.io.Serializable;
 @ToString
 @EqualsAndHashCode
 @Accessors(fluent = true)
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
+@NoArgsConstructor
+@AllArgsConstructor
 public class Size implements Serializable {
     private static final long serialVersionUID = -6994522162639554389L;
 

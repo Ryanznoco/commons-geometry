@@ -1,10 +1,6 @@
 package cn.com.qjun.commons.geometry;
 
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.ToString;
+import lombok.*;
 import lombok.experimental.Accessors;
 
 import java.io.Serializable;
@@ -17,7 +13,8 @@ import java.io.Serializable;
 @ToString
 @EqualsAndHashCode
 @Accessors(fluent = true)
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
+@NoArgsConstructor
+@AllArgsConstructor
 public class Rect implements Serializable {
     private static final long serialVersionUID = 433259771921149444L;
 
@@ -90,5 +87,13 @@ public class Rect implements Serializable {
 
     public int y2() {
         return y + height;
+    }
+
+    public Point point() {
+        return Point.of(x, y);
+    }
+
+    public Size size() {
+        return Size.of(width, height);
     }
 }

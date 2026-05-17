@@ -1,10 +1,6 @@
 package cn.com.qjun.commons.geometry;
 
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.ToString;
+import lombok.*;
 import lombok.experimental.Accessors;
 
 import java.io.Serializable;
@@ -17,7 +13,8 @@ import java.io.Serializable;
 @ToString
 @EqualsAndHashCode
 @Accessors(fluent = true)
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
+@NoArgsConstructor
+@AllArgsConstructor
 public class Point implements Serializable {
     private static final long serialVersionUID = -7089076119784425607L;
 
@@ -26,5 +23,9 @@ public class Point implements Serializable {
 
     public static Point of(int x, int y) {
         return new Point(x, y);
+    }
+
+    public Point move(int deltaX, int deltaY) {
+        return new Point(x + deltaX, y + deltaY);
     }
 }
