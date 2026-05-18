@@ -25,6 +25,22 @@ public class Point implements Serializable {
         return new Point(x, y);
     }
 
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
     public Point move(int deltaX, int deltaY) {
         return new Point(x + deltaX, y + deltaY);
     }
